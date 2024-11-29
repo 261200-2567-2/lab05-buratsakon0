@@ -32,7 +32,7 @@ public class BaseRPGChar implements RPGCharacter {
         }
 
         accessory.setOwner(this);
-        System.out.println(name + " is equipping " + accessory.getAccessoryName() + " ***");
+        System.out.println("[" + name + " is equipping " + accessory.getAccessoryName() + "]");
     }
 
     @Override
@@ -63,7 +63,7 @@ public class BaseRPGChar implements RPGCharacter {
                     System.out.println("Can't attacking yourself");
                     return;
                 }
-                System.out.println(getName() + " is attacking " + target.getName() + " with " + Atk + " DMG");
+                System.out.println(getName() + " is attacking " + target.getName() + " with " + Atk + " DMG \uD83D\uDCA5");
             }else {
                 System.out.println("Please input TARGET");
             }
@@ -82,10 +82,10 @@ public class BaseRPGChar implements RPGCharacter {
                 if (target.MP > target.MaxMP) {
                     target.MaxMP = target.MP;
                 } else if (target == this) {
-                    System.out.println("Casting yourself : " + getName());
+                    System.out.println("Casting yourself : " + getName() + " \uD83E\uDE84");
                     return;
                 }
-                System.out.println(getName() + " is casting a spell! for " + target.getName());
+                System.out.println(getName() + " is casting a spell! for " + target.getName() + " \uD83E\uDE84");
             }else {
                 System.out.println("Please input TARGET");
             }
@@ -107,7 +107,7 @@ public class BaseRPGChar implements RPGCharacter {
                     System.out.println("Can't slashing yourself");
                     return;
                 }
-                System.out.println(getName() + " is slashing " + target.getName() + " with " + abs(Atk * 1.2 - target.Def) + " DMG");
+                System.out.println(getName() + " is slashing " + target.getName() + " with " + abs(Atk * 1.2 - target.Def) + " DMG \uD83D\uDD2A \uD83E\uDE78");
             }else {
                 System.out.println("Please input TARGET");
             }
@@ -129,7 +129,7 @@ public class BaseRPGChar implements RPGCharacter {
                     System.out.println("Can't shooting yourself");
                     return;
                 }
-                System.out.println(getName() + " is shooting!" + target.getName() + " with " + abs(Atk * 1.5 - target.Def) + " DMG");
+                System.out.println(getName() + " is shooting!" + target.getName() + " with " + abs(Atk * 1.5 - target.Def) + " DMG \uD83C\uDFAF");
             }else {
                 System.out.println("Please input TARGET");
             }
@@ -153,7 +153,7 @@ public class BaseRPGChar implements RPGCharacter {
                     System.out.println("Can't lightning yourself");
                     return;
                 }
-                System.out.println(getName() + " casts Lightning Bolt!");
+                System.out.println(getName() + " casts Lightning Bolt! \uD83D\uDDF2 \uD83D\uDDF2 \uD83D\uDDF2 ");
             }else{
                 System.out.println("Please input TARGET");
             }
@@ -175,7 +175,7 @@ public class BaseRPGChar implements RPGCharacter {
                     System.out.println("Healing yourself : " + getName());
                     return;
                 }
-                System.out.println(getName() + " is healing " + target.getName());
+                System.out.println(getName() + " is healing " + target.getName() + " \uD83D\uDC8A");
             }else{
                 System.out.println("Please input TARGET");
             }
