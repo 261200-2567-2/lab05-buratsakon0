@@ -1,15 +1,15 @@
 public class Lab05 {
     public static void main(String[] args) {
         // Create characters
-        BaseRPGChar.Knight knight = new BaseRPGChar.Knight("Arthur");
-        BaseRPGChar.Archer archer = new BaseRPGChar.Archer("Legolas");
-        BaseRPGChar.Mage mage = new BaseRPGChar.Mage("Gandalf");
-        BaseRPGChar.Healer healer= new BaseRPGChar.Healer("Florence");
+        BaseRPGChar.Knight knight = new BaseRPGChar.Knight("Arthur⚔\uFE0F");
+        BaseRPGChar.Archer archer = new BaseRPGChar.Archer("Legolas\uD83C\uDFF9");
+        BaseRPGChar.Mage mage = new BaseRPGChar.Mage("Gandalf\uD83E\uDDD9\u200D♂\uFE0F");
+        BaseRPGChar.Healer healer= new BaseRPGChar.Healer("Florence\uD83D\uDC89");
 
         // Create accessories
-        BaseAccessory.Gauntlets gauntlets = new BaseAccessory.Gauntlets("Steel Gauntlets");
-        BaseAccessory.Boots boots = new BaseAccessory.Boots("Speedy Boots");
-        BaseAccessory.Ring ring = new BaseAccessory.Ring("Magic Ring");
+        BaseAccessory.Gauntlets gauntlets = new BaseAccessory.Gauntlets("Steel Gauntlets✊");
+        BaseAccessory.Boots boots = new BaseAccessory.Boots("Speedy Boots\uD83E\uDEBD");
+        BaseAccessory.Ring ring = new BaseAccessory.Ring("Magic Ring\uD83D\uDC8D");
 
         knight.showStats();
 
@@ -44,6 +44,7 @@ public class Lab05 {
 
         mage.showStats();
         archer.shoot(mage);
-
+        archer.equip(boots);
+        archer.equip(ring);
     }
 }
